@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <meta
+      name="description"
+      content="A modern temperature converter supporting Celsius, Fahrenheit, and Kelvin."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated background blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <main class="container">
+      <!-- Card -->
+      <div class="card">
+        <!-- Header -->
+        <div class="card-header">
+          <div class="icon-wrap">
+            <!-- Thermometer SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="card-title">Temperature Converter</h1>
+            <p class="card-subtitle">
+              Convert between Celsius, Fahrenheit &amp; Kelvin
+            </p>
+          </div>
+        </div>
+
+        <!-- Input row -->
+        <div class="input-row">
+          <!-- Degrees input -->
+          <div class="field">
+            <label for="degrees-input" class="label">Degrees</label>
+            <input
+              type="number"
+              id="degrees-input"
+              class="input"
+              placeholder="e.g. 72"
+              autocomplete="off"
+            />
+            <span class="error-msg" id="input-error"
+              >Please enter a valid number.</span
+            >
+          </div>
+
+          <!-- Unit dropdown (custom, fully styleable) -->
+          <div class="field">
+            <span class="label">Type</span>
+            <div
+              class="custom-select"
+              id="custom-select"
+              role="listbox"
+              aria-label="Temperature unit"
+              tabindex="0"
+            >
+              <!-- Trigger button -->
+              <div class="cs-trigger" id="cs-trigger">
+                <span class="cs-dot" id="cs-dot"></span>
+                <span class="cs-value" id="cs-value">Fahrenheit (°F)</span>
+                <svg
+                  class="cs-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+              <!-- Options list -->
+              <ul class="cs-options" id="cs-options" role="listbox">
+                <li class="cs-option" data-value="celsius" role="option">
+                  <span class="cs-opt-dot opt-celsius"></span>
+                  <span>Celsius</span>
+                  <span class="cs-opt-unit">°C</span>
+                </li>
+                <li
+                  class="cs-option cs-option--active"
+                  data-value="fahrenheit"
+                  role="option"
+                >
+                  <span class="cs-opt-dot opt-fahrenheit"></span>
+                  <span>Fahrenheit</span>
+                  <span class="cs-opt-unit">°F</span>
+                </li>
+                <li class="cs-option" data-value="kelvin" role="option">
+                  <span class="cs-opt-dot opt-kelvin"></span>
+                  <span>Kelvin</span>
+                  <span class="cs-opt-unit">K</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /input-row -->
+
+        <!-- Convert button -->
+        <button id="convert-btn" class="btn-convert">
+          <span class="btn-text">Convert</span>
+          <svg
+            class="btn-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="17 1 21 5 17 9" />
+            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+            <polyline points="7 23 3 19 7 15" />
+            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+          </svg>
+        </button>
+
+        <!-- Results area — hidden until first conversion -->
+        <div class="results" id="results" aria-live="polite">
+          <p class="results-label">Results</p>
+
+          <div class="results-grid">
+            <div class="result-card" id="result-celsius">
+              <div class="result-unit-tag celsius-tag">°C</div>
+              <div class="result-value" id="val-celsius">—</div>
+              <div class="result-unit-name">Celsius</div>
+            </div>
+
+            <div class="result-card" id="result-fahrenheit">
+              <div class="result-unit-tag fahrenheit-tag">°F</div>
+              <div class="result-value" id="val-fahrenheit">—</div>
+              <div class="result-unit-name">Fahrenheit</div>
+            </div>
+
+            <div class="result-card" id="result-kelvin">
+              <div class="result-unit-tag kelvin-tag">K</div>
+              <div class="result-value" id="val-kelvin">—</div>
+              <div class="result-unit-name">Kelvin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /card -->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

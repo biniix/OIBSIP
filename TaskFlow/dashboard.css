@@ -1,0 +1,417 @@
+/* Dashboard Theme */
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  background: #f4f5f7;
+  color: #172b4d;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  height: 100%;
+  padding: 24px;
+  border-right: 1px solid #ebecf0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.logo-box {
+  width: 32px;
+  height: 32px;
+  background: #5e2ced;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.brand-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.menu-section {
+  margin-bottom: 16px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #5e6c84;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #f3f0ff;
+  color: #5e2ced;
+}
+
+.menu-item .icon {
+  font-size: 18px;
+}
+.badge {
+  margin-left: auto;
+  background: #5e2ced;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.user-profile {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-top: 1px solid #ebecf0;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #ebecf0;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  justify-content: space-between;
+}
+
+.header-left h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.header-left span {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.search-bar {
+  background: #f4f5f7;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  color: #5e6c84;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ebecf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #5e6c84;
+}
+
+/* Stats Row */
+.stats-row {
+  padding: 12px 32px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #ebecf0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.icon-purple {
+  background: #f3f0ff;
+  color: #5e2ced;
+}
+.icon-blue {
+  background: #e6fcff;
+  color: #00c7e6;
+}
+.icon-orange {
+  background: #fff4e6;
+  color: #ffab00;
+}
+
+.stat-info h4 {
+  font-size: 12px;
+  color: #5e6c84;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.stat-info p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+/* Filter Bar */
+.filter-bar {
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-left h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.filter-left p {
+  color: #5e6c84;
+  font-size: 13px;
+}
+.filter-actions {
+  display: flex;
+  gap: 12px;
+}
+.btn-filter,
+.btn-new {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+.btn-filter {
+  background: #fff;
+  border: 1px solid #ebecf0;
+  color: #172b4d;
+}
+.btn-new {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Scrollable board layout */
+.kanban-board {
+  flex: 1;
+  padding: 16px 32px 32px;
+  overflow-x: auto;
+  display: flex;
+  gap: 24px;
+}
+
+.column {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+.col-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #172b4d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.col-title::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  display: block;
+}
+.col-header-actions {
+  color: #5e6c84;
+  cursor: pointer;
+}
+
+/* Task cards with hover effects */
+.task-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(9, 30, 66, 0.05);
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(9, 30, 66, 0.1);
+}
+
+/* Pastel background themes for different status/categories */
+.card-blue {
+  background: #e6fcff;
+}
+.card-orange {
+  background: #fff4e6;
+}
+.card-pink {
+  background: #ffe9f0;
+}
+.card-green {
+  background: #e3fcef;
+}
+.card-purple {
+  background: #eae6ff;
+}
+
+/* Card Content */
+.card-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  color: #444;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  color: #172b4d;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #5e6c84;
+  margin-bottom: 16px;
+}
+
+.progress-area {
+  margin-bottom: 16px;
+}
+.progress-bar {
+  height: 6px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.fill {
+  height: 100%;
+  background: #5e2ced;
+  border-radius: 3px;
+}
+.progress-text {
+  font-size: 10px;
+  color: #5e6c84;
+  text-align: right;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.card-users {
+  display: flex;
+  padding-left: 8px;
+}
+.user-pile {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+}
+
+.card-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #5e6c84;
+}
